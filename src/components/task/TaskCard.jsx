@@ -10,7 +10,7 @@ export const TaskCard = () => {
   const [taskList, setTaskList] = useState([]);
 
   return (
-    <div className='taskCard'>
+    <div className="taskCard">
       <TaskCardTitle />
       <TaskCardDeleteButton />
       <TaskAddInput
@@ -19,7 +19,7 @@ export const TaskCard = () => {
         taskList={taskList}
         setTaskList={setTaskList}
       />
-      <Tasks />
+      <Tasks inputText={inputText} taskList={taskList} />
     </div>
-  )
+  );
 }

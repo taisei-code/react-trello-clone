@@ -9,7 +9,15 @@ export const TaskAddInput = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e)
+    console.log(e);
+    // カードを追加する
+    setTaskList([
+      ...taskList,
+      {
+        text: inputText,
+      },
+    ]);
+    setInputText("");
   }
 
   // フォームに入力される度にinputTextを更新している
@@ -26,6 +34,7 @@ export const TaskAddInput = ({
           placeholder="add a task"
           className='taskAddInput'
           onChange={handleChange}
+          value={inputText}
         />
       </form>
     </div>
