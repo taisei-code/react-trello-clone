@@ -3,15 +3,16 @@ import React, { useState } from 'react'
 export const TaskCardTitle = () => {
 
   const [isClick, setIsClick] = useState(false);
+  // 入力した値を管理する状態変数
   const [inputCardTitle, setInputCardTitle] = useState("Today");
 
+  // クリックしたらisClickをfalseにする関数
   const handleClick = () => {
     setIsClick(true);
-    console.log(isClick);
   }
 
+  // 入力された値が変更する度にinputCardTitleを更新する関数
   const handleChange = (e) => {
-    console.log(inputCardTitle);
     // 入力している情報を更新
     setInputCardTitle(e.target.value);
   }
@@ -29,6 +30,7 @@ export const TaskCardTitle = () => {
 
   return (
     <div onClick={handleClick} className='taskCardTitleInputArea'>
+      {/* isClickがtrueなら「?」の後「form」、falseなら「:」の後「h3] */}
       {isClick ? (
         <form onSubmit={handleSubmit} >
           <input
