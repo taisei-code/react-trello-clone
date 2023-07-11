@@ -14,7 +14,7 @@ export const TaskAddInput = ({
     if (inputText === '') {
       return;
     }
-    // カードを追加する
+    // タスクを追加する
     setTaskList([
       ...taskList,
       {
@@ -23,13 +23,13 @@ export const TaskAddInput = ({
         text: inputText,
       },
     ]);
+    // タスクを追加したら、入力フォームを空にする
     setInputText("");
   }
 
   // フォームに入力される度にinputTextを更新している
   const handleChange = (e) => {
     setInputText(e.target.value);
-    console.log(inputText);
   }
 
   return (

@@ -6,7 +6,9 @@ import { Tasks } from "./Tasks";
 
 export const TaskCard = () => {
 
+  // 入力情報
   const [inputText, setInputText] = useState("");
+  // タスクを格納するリスト
   const [taskList, setTaskList] = useState([]);
 
   return (

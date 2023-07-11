@@ -30,6 +30,7 @@ export const TaskCardTitle = () => {
 
   return (
     <div onClick={handleClick} className='taskCardTitleInputArea'>
+
       {/* isClickがtrueなら「?」の後「form」、falseなら「:」の後「h3] */}
       {isClick ? (
         <form onSubmit={handleSubmit} >
@@ -46,6 +47,7 @@ export const TaskCardTitle = () => {
       ) : (
           <h3>{inputCardTitle}</h3>
       )}
+      
     </div>
   );
 }
